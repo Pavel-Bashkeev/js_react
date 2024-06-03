@@ -79,7 +79,7 @@ git add -A
 git commit -m "сообщение"
 ```
 
-- Для просмотра изменения 
+- Для просмотра изменения до предыдущего коммита
 
 ```shell
 git diff
@@ -90,4 +90,46 @@ git diff
 ```shell
 git diff --color-words
 ```
-Пример
+Пример в powerShell эти команды работают одинокого
+
+![Разница команд git diff и git diff --color-words](../images/gti_1.jpg "Разница команд git diff и git diff --color-words")
+
+- Для того чтобы восстановить удаленный фаил нужна команда
+
+```shell
+git checkout имя_файла
+```
+
+- Если нужно восстановить все файлы или откатиться к предыдущему коммиту
+```shell
+git checkout .
+```
+
+---
+
+# Для подключения репозитория к github
+
+- После его создания нужно выполнить последовательно команды если он еще не создан локально
+
+```shell
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin путь до репозитория
+git push -u origin main
+```
+- или если репозиторий уже инициализирован локально и в нем уже ведутся работы то достаточно  выполнить следующие команды
+
+```shell
+git branch -M main
+git remote add origin путь до репозитория
+git push -u origin main
+```
+
+- `git branch -M main` Если в конфиге прописана дефолтная ветка то эту команду можно пропустить
+  
+##### Отправить данные в репозиторий
+```shell
+git push -u origin main
+```
