@@ -1,5 +1,6 @@
 "use strict"
 
-const minNumber = (x, y) => x % y ? x : y;
 
-console.log(minNumber(10, 5));
+const minNum = (x, y) => (x + y - Math.abs(x - y)) / 2;
+
+console.log(minNum(10, -7));
