@@ -1,6 +1,6 @@
 "use strict"
 {
-	let totalSum = Number(prompt("Для расчета налога ведите ваш заработок:"));
+	const totalSum = Number(prompt("Для расчета налога ведите ваш заработок:"));
 	let percent = 13;
 	let taxValue = 0;
 	let differenceSum = 0;
